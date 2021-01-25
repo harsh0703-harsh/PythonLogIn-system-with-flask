@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <title>Document</title>
+
+
+</head>
+
+<body>
+  <form action="{{url_for('sending')}}" method="post">
+    <div class="app">
+      <div class="heading">OneTwoMany</div>
+      <div class="content">
+        <div class="gmail">
+          <div id="box1">
+            <div class="wrap">
+              <label for="email">Email</label><input name="email" type="text"  />
+            </div>
+
+            <div class="wrap">
+              <label for="password">Password </label><input name="password" type="password"  />
+            </div>
+            <div class="alert">{{ message }}</div>
+            <button id="sub" type="submit">Submit</button>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </form>
+
+</body>
+<style>
+  .app {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .heading {
+    padding: 10px;
+    text-align: center;
+    font-size: 80px;
+  }
+
+  #box1 {
+    border-style: solid;
+    padding: 73px;
+    font-size: 24px;
+    border-radius: 0.9em;
+
+  }
+
+
+  .content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    font-size: 24px;
+  }
+
+  .gmail,
+  .messagebox {
+    display: flex;
+    flex-flow: column nowrap;
+    min-width: 300px;
+    max-width: 500px;
+    margin: 1em;
+    padding: 0.5em;
+    font-size: 24px;
+  }
+
+  .wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0 0 0.7em 0;
+    font-size: 24px;
+    width: 100%;
+  }
+
+  .wrap label {
+    padding-left: 0.5em;
+    font-size: 24px;
+  }
+
+  .wrap input,
+  .wrap textarea,
+  .wrap select {
+    width: 200px;
+    border: none;
+    border-bottom: 2px solid #aaa;
+    transition-duration: 0.5s;
+    font-size: 1em;
+  }
+
+  .wrap label {
+    font-size: 24px;
+  }
+
+  .wrap input:focus,
+  .wrap textarea:focus,
+  .wrap select:focus {
+
+    border-bottom: 2px solid black;
+  }
+
+  #afterpass {
+    font-size: 0.7em;
+    border: none;
+    padding: 0.5em 1em;
+    margin-top: 1em;
+    background: linear-gradient(45deg, hotpink, lightblue);
+    text-align: center;
+    width: 180px;
+    height: 54px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    transition-duration: 0.5s;
+  }
+
+  #afterpass:hover {
+    transform: translateY(-4px);
+    box-shadow: none;
+  }
+
+  #sub {
+    font-size: 0.9em;
+    border: none;
+    color: white;
+    padding: 0.5em 1em;
+    margin-top: 1em;
+    background: linear-gradient(45deg, hotpink, lightblue);
+    text-align: center;
+    width: 180px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+
+    transition-duration: 0.5s;
+  }
+
+  #sub:hover {
+    transform: translateY(-4px);
+    box-shadow: none;
+  }
+
+  .alert {
+    color: rgb(17, 226, 9);
+    padding: 0.5em;
+  }
+
+  body {
+    background: url("/static/applicant-tracking-system-138k.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
+
+</html>

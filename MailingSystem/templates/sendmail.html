@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form  action="{{url_for('content_sending')}}" method='post'>
+        <div id="app">
+            <div id="container1">
+
+                <div id="wrap">
+                    <label>To</label><input type="email" name="to" >
+                </div>
+
+                <div id="wrap">
+                    <label>From</label><input type="email"  value={{From_value}} disabled style="cursor: not-allowed;">
+                </div>
+                <div id="wrap">
+                    <label>Subject</label><input type="text" placeholder='Max 100 words' maxlength="100" name='subject'>
+                </div>
+                <div id="wrap" class="message_wrap">
+                    <label>Message</label> <textarea type="email" name="message" maxlength="400"></textarea>
+                </div>
+
+                <div id="wrap">
+                    <button type="submit" id="sub">Submit</button>
+                </div>
+
+            </div>
+        </div>
+    </form>
+</body>
+<style>
+    #app {
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+        border-radius: 3%;
+        display: inline-block;
+        backdrop-filter: blur(10px);
+        flex-direction: row;
+        margin: 1em;
+
+    }
+
+    #container1 {
+        display: flex;
+        flex-direction: column;
+        font-size: 2.1em;
+
+        flex-wrap: nowrap;
+
+
+    }
+
+    #wrap {
+        display: flex;
+        padding: 0.5em;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+
+    }
+
+    input {
+        max-width: 50vw;
+        padding: 0 0.5em;
+        font-size: 1.0em;
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(10px);
+        border: none;
+        background: none;
+        outline: none;
+    }
+
+    #wrap textarea {
+        width: calc(100% - 1em);
+        font-size: x-large;
+        height: 30vh;
+        border: none;
+        border-radius: 10px;
+        outline: none;
+        padding: 0.5em;
+        font-size: 1em;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(20px);
+        background: none;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        background-image: url("/static/applicant-tracking-system-138k.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        background-position: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .message_wrap {
+        flex-flow: column wrap;
+        text-align: center;
+    }
+
+    button {
+        font-size: 1.2em;
+        background: none;
+        border: none;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(10px);
+        padding: 0.5em 1em;
+        border-radius: 10px;
+        outline: none;
+        transition-duration: 0.5s;
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    }
+
+    button:hover {
+        box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.4);
+        transform: scale(0.9)
+    }
+</style>
+
+</html>
